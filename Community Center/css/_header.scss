@@ -1,0 +1,209 @@
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+@use "setting" as s;
+/*除算用にmathモジュールをインポート*/
+@use "sass:math";
+
+/* ここから記述します。 */
+
+/* サブタイトル */
+.section-sub-title {
+  color: #185288;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+/* ヘッダー */
+.header {
+  height: 56px;
+  position: relative;
+  padding: 12px 40px;
+  background-color: s.$colorGreen;
+  border-bottom: 1px solid #ccc;
+
+  @include s.mq(tab) {
+    padding: 10px 30px;
+  }
+
+  @include s.mq(sp) {
+    padding: 8px 20px;
+    background-color: s.$colorGreen;
+  }
+}
+
+// ヘッダー内のレイアウト
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  @include s.mq(sp) {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+}
+// サイトタイトル
+.site-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: s.$colorWhite;
+  @include s.mq(sp) {
+    font-size: 20px;
+  }
+}
+
+
+
+/* ハンバーガーボタン */
+.hamburger {
+  position: absolute;
+  top: 36%;
+  right: 16px;
+  margin-left: auto; // 右端に寄せる
+  transform: translateY(-50%);
+  width: 30px;
+  cursor: pointer;
+  z-index: 1001; // オーバーレイより前に表示
+margin-left: auto; // 右端に寄せる
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    transition: 0.4s;
+  }
+
+  span:nth-child(1) { top: 0; }
+  span:nth-child(2) { top: 8px; }
+  span:nth-child(3) { top: 16px; }
+    /* スマホ画面のときだけ上に寄せる */
+    @include s.mq(sp) {
+      .hamburger {
+        position: absolute;
+        top: 8px;
+        right: 20px;
+      }
+      .header-inner {
+        position: relative;
+      }
+    }
+  /* PC画面では非表示 */
+  @include s.mq(pc) {
+  
+    display: none ;
+  
+
+  /* active時に「×」へ変形 */
+
+  &.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+ 
+  }
+  &.active span:nth-child(2) {
+    opacity: 0; /* 真ん中の線を消す */
+  }
+  &.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  }
+}
+/* ナビゲーションメニュー */
+.nav {
+  position: fixed;
+  top: 0;
+  right: -250px;   // 初期状態は画面外に隠す
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  transition: 0.4s;
+  z-index: 1002;   // overlayより前に表示
+
+  &.active {
+    right: 0;      // active時に右からスライドイン
+  }
+
+  ul {
+    list-style: none;
+    padding: 40px 20px;
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+  }
+}
+/* スマホ・タブレット共通で右から出す */
+@include s.mq(sp) {
+  .nav {
+    left: -250px;
+    right: auto;    // 右指定を無効化
+  }
+  .nav.active {
+    left: 0;
+    right: auto;
+  }
+}
+
+@include s.mq(tab) {
+  .nav {
+    right: -250px;
+    left: auto;    // 左指定を無効化
+  }
+  .nav.active {
+    right: 0;
+    left: auto;
+  }
+}
+/* navPC用（常時表示） */
+ @include s.mq(pc)  {
+  .nav {
+    position: static;   // 固定解除（ヘッダー内に自然に配置）
+    right: 0;           // 常に表示
+    width: auto;        // 横幅は自動
+    height: auto;       // 高さも自動
+      box-shadow: none;   // 影を消すなど調整
+    background-color: s.$colorGreen;
+    ul {
+      display: flex;        // 横並びにする
+      gap: 24px;            // 項目間の余白
+      padding: 0;           // PCでは余白をリセット
+      margin: 0;
+    }
+
+    li {
+      margin: 0;            // 縦方向の余白をリセット
+    }
+  }
+
+  .overlay {
+    display: none;          // PCではオーバーレイ不要
+  }
+}
+  
+/* オーバーレイ背景 */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); // 半透明の黒
+  opacity: 0;                  // 初期状態は非表示
+  visibility: hidden;
+  transition: 0.4s;
+  z-index: 1000;               // ナビより後ろ、ハンバーガーより前
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

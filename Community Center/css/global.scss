@@ -1,0 +1,124 @@
+/* ラベルと入力欄 */
+.wpcf7 form p {
+  margin-bottom: 1.5rem;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 textarea,
+.wpcf7 select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* フォーム全体の余白と幅 */
+.wpcf7 form {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 各項目の余白 */
+.wpcf7 form p {
+  margin-bottom: 20px;
+}
+
+/* ラベル */
+.wpcf7 form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* テキスト・メール・電話・日付・セレクト */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 input[type="date"],
+.wpcf7 select,
+.wpcf7 textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* フォーカス時 */
+.wpcf7 input:focus,
+.wpcf7 select:focus,
+.wpcf7 textarea:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.2);
+  outline: none;
+}
+
+/* テキストエリア */
+.wpcf7 textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* 添付ファイル */
+.wpcf7 input[type="file"] {
+  border: none;
+  padding: 0;
+}
+
+/* 同意チェックボックス */
+.wpcf7-acceptance input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* 送信ボタン */
+.wpcf7 input[type=submit] {
+    background: #0078d4;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+
+    width: auto;          /* ← 幅を中身に合わせる */
+    display: block;       /* ← 中央寄せのために block に */
+    margin: 0 auto;       /* ← 中央寄せ */
+}
+
+.wpcf7 input[type="submit"]:hover {
+  background: #005fa3;
+}
+
+/* エラーメッセージ */
+.wpcf7-not-valid-tip {
+  color: #d93025;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* 送信後メッセージ */
+.wpcf7 form .wpcf7-response-output {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.wpcf7 form .wpcf7-mail-sent-ok {
+  border: 2px solid #28a745;
+  color: #28a745;
+}
+
+.wpcf7 form .wpcf7-validation-errors {
+  border: 2px solid #d93025;
+  color: #d93025;
+}
