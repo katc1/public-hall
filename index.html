@@ -1,0 +1,317 @@
+<!-- 主にトップページとして実装 -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- ウェブページの文字エンコーディングを指定するために使用されます。 -->
+  <meta charset="utf-8" />
+  <!-- ウェブページのビューポート（表示領域）の設定を指定します。 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- ウェブページのタイトルに使用されます。 -->
+  <title>井川城中区公民館</title>
+  <!-- ウェブページの簡潔な説明や概要を提供するために使用されます。 -->
+  <meta name="description" content="公民館の概要" />
+  <!-- モバイルブラウザが電話番号の検出やリンク化を行わないように設定しています。 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- ファビコンを設定しています。 -->
+  <link rel="icon" href="image/favicon.ico">
+  <!-- Google Fontsの「Zen Kaku Gothic New」を設定しています。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  <!-- reset.cssは、styleを使用しています。 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+  
+  <!-- Font Awesome 読み込み（CDN） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- ここから記述します。 -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="site-title">松本市井川城中区公民館</h1>
+      <!-- ハンバーガーボタン-->
+      <button class="hamburger" aria-label="メニューを開く" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- ナビゲーション -->
+      <nav class="nav" id="nav">
+        <ul class="header-list">
+          <li class="header-item"><a class="header-link" href="#about">施設概要</a></li>
+          <li class="header-item"><a class="header-link" href="#facility">施設案内</a></li>
+          <li class="header-item"><a class="header-link" href="#news">お知らせ</a></li>
+          <li class="header-item"><a class="header-link" href="#contact">お問い合わせ</a></li>
+          <li class="header-item"><a class="header-link" href="download.html">資料ダウンロード</a></li>
+        </ul>
+
+      </nav>
+    </div>
+
+  </header>
+ <!-- ここまで無視 -->
+
+  <!-- ヘッターここまで -->
+
+
+
+
+  <!-- ファーストビュー -->
+<!-- ここからfront-page.phpにはりつけ-->
+  <section class="slider">
+    <div class="slides">
+      <!-- 1枚目 -->
+      <div class="slide">
+      
+
+      </div>
+      <!-- 2枚目 -->
+      <div class="slide">
+              
+      <!-- 3枚目 -->
+      <div class="slide">
+        
+      </div>
+    </div>
+  </section>
+  <!-- ファーストビュー終了 -->
+   <!-- ここまで無視 -->
+<!-- single.php　archive.phpはりつけ -->
+  <!-- 公民館からのお知らせ -->
+  <div class="content-wrapper">
+    <h2 class="section-title-en">公民館からのお知らせ</h2>
+    <section class="about-wrapper" id="news">
+      <div class="about-inner">
+        <div class="about-text-wrap">
+          <dl class="popularity-list">
+            <dt class="popularity-itemDate">2025.6.1更新</dt>
+            <dd class="popularity-itemText">
+              <a class="popularity-link" href="フリーマーケット企画書.pdf" download>
+                第２回役員会要綱
+                <span class="pdf-text">
+                  <i class="fa-solid fa-file-pdf"></i> [PDFダウンロードはこちら]
+                </span>
+              </a>
+            </dd>
+
+            <dt class="popularity-itemDate">2025.6.22（日）</dt>
+            <dd class="popularity-itemText">
+              <a class="popularity-link" href="#">消火栓放水訓練の実施について</a>
+            </dd>
+
+            <dt class="popularity-itemDate">2025.8.1</dt>
+            <dd class="popularity-itemText">
+              <a class="popularity-link" href="#">10時からEスポーツやります</a>
+            </dd>
+
+            <dt class="popularity-itemDate">2025.05</dt>
+            <dd class="popularity-itemText"></dd>
+
+            <dt class="popularity-itemDate">2025.08.28</dt>
+            <dd class="popularity-itemText"></dd>
+
+            <dt class="popularity-itemDate">2024.05.20</dt>
+            <dd class="popularity-itemText">
+              <a class="popularity-link" href="#">インテリアアイデア10選</a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+  
+  <!-- お知らせここまで -->
+<!-- single.phpとarchive.phpに　はりつけ ここまで-->
+ <!-- single.php　はりつけ ここまで-->
+  <!-- 資料ダウンロード -->
+
+  <main class="content-wrapper">
+    <h2 class="section-title">📑 資料ダウンロード</h2>
+    <p>公民館からのお知らせや配布資料をこちらからダウンロードできます。</p>
+    <section class="download-section">
+      <h3>最新資料</h3>
+      <ul class="download-list">
+        <li>
+          <span>第２回役員会要綱（2025年6月1日更新）</span>
+          <a href="docs/役員会要綱.pdf" class="download-button">
+            <i class="fa-solid fa-file-pdf"></i> PDFダウンロード
+          </a>
+        </li>
+        <li>
+          <span>消火栓放水訓練のお知らせ（2025年6月22日）</span>
+          <a href="docs/消火栓放水訓練.pdf" class="download-button">
+            <i class="fa-solid fa-file-pdf"></i> PDFダウンロード
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="download-section">
+      <h3>過去の資料</h3>
+      <ul class="download-list">
+        <li>
+          <span>インテリアアイデア10選（2024年5月20日）</span>
+          <a href="docs/インテリアアイデア.pdf" class="download-button">
+            <i class="fa-solid fa-file-pdf"></i> PDFダウンロード
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="qr-section">
+      <h3>スマホからアクセス</h3>
+      <p>以下のQRコードを読み取ると、このページにアクセスできます。</p>
+      <img src="image/download_qr.png" alt="資料ダウンロードページQRコード" width="150">
+    </section>
+  </main>
+  <!-- 公民館の概要 -->
+
+  <div class="content-wrapper">
+
+    <section class="section" id="about">
+      <h2 class="section-title-en">施設概要</h2>
+      <div class="scrollBox">
+        <div class="scrollBox_content">
+          <table class="table_1">
+            <colgroup>
+              <col style="width: 25%;"><!-- 左列を狭める -->
+            </colgroup>
+            <colgroup class="pc-only">
+              <col style="width: 75%;"><!-- 右列を広げる -->
+            </colgroup>
+            <tr>
+              <th class="table_item">名称</th>
+              <td>
+                〒390-0831<br>松本市井川城中区公民館
+                <br>
+                <a href="https://www.google.com/maps" target="_blank" class="google-map-link">
+                  <i class="fa-brands fa-google"></i> Google Mapで見る
+                </a>
+
+
+              </td>
+            </tr>
+            <tr>
+              <th class="table_item">TEL/FAX</th>
+              <td>TEL: 026-222-2222/FAX: 026-222-2223</td>
+            </tr>
+            <tr>
+              <th class="table_item">開館時間</th>
+              <td>9:00〜17:00</td>
+            </tr>
+            <tr>
+              <th class="table_item">受付時間</th>
+              <td>9:00〜17:00</td>
+            </tr>
+            <tr>
+              <th class="table_item">休館日</th>
+              <td>毎週火曜日・毎週木曜日</td>
+            </tr>
+            <tr>
+              <th class="table_item">開館年月日</th>
+              <td>1982/11</td>
+            </tr>
+            <tr>
+              <th class="table_item">敷地面積</th>
+              <td>平方メートル</td>
+            </tr>
+            <tr>
+              <th class="table_item">延床面積</th>
+              <td>平方メートル</td>
+            </tr>
+            <tr>
+              <th class="table_item">構造</th>
+              <td>鉄筋工ンクリート１階建て</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- 公民館概要終了 -->
+    <!-- 施設案内ここから -->
+    <section class="section" id="facility">
+      <h2 class="section-title-en">施設案内</h2>
+      <div class="scrollBox">
+        <div class="scrollBox_content">
+          <table class="table_1">
+            <colgroup>
+              <col style="width: 25%;"><!-- 左列を狭める -->
+            </colgroup>
+            <colgroup class="pc-only">
+              <col style="width: 75%;"><!-- 右列を広げる -->
+            </colgroup>
+            <tr>
+              <th class="table_item">会議室</th>
+              <td>収容人数20名、机10台、椅子20脚、ホワイトボード1台、プロジェクター1台
+                <br>
+                <img src="image/井川城公民館.png" alt="会議室の写真" width="200">
+              </td>
+            </tr>
+            <tr>
+              <th class="table_item">和室</th>
+              <td>収容人数15名、座卓5台、座布団15枚<br>
+                <img src="image/井川城公民館.png" alt="会議室の写真" width="200">
+              </td>
+            </tr>
+            <tr>
+              <th class="table_item">調理室</th>
+              <td>収容人数12名、調理台3台、ガスコンロ2台、冷蔵庫1台、電子レンジ1台、炊飯器1台<br>
+                <img src="image/井川城公民館.png" alt="会議室の写真" width="200">
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- 施設案内ここまで -->
+
+    <!-- 問い合わせ -->
+    <div class="access-info">
+      <h2>井川城中区公民館</h2>
+      <p class="purpose-text">
+        公民館は、地域の皆さんが集い、学び、交流する場です。<br>
+        教養の向上や健康の増進、文化活動を通じて、豊かな暮らしと地域のつながりを育みます。<br>
+        子どもから高齢者まで、世代を超えて誰もが参加できる活動を支え、<br>
+        地域の生活文化や福祉の向上に寄与することを目的としています。
+      </p>
+      <a href="contact.html" class="contact-button"><span class="arrow">お問い合わせはこちら</span></a>
+    </div>
+
+    <!-- 問い合わせここまで -->
+     <!-- front-page.php にはりつけここまで-->
+    <!-- topに戻るﾎﾞﾀﾝ -->
+
+    <a href="#top" class="back-to-top">▲ トップに戻る</a>
+    <!-- topに戻るﾎﾞﾀﾝここまで-->
+    <!-- フッタ -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <!-- 既存のインフォメーション -->
+        <div class="footer-info" id="contact">
+          <h2 class="footer-title">松本市井川城中区公民館</h2>
+          <p>〒390-0827 長野県松本市井川城〇丁目〇番地</p>
+          <p>TEL: 0263-XX-XXXX</p>
+        </div>
+
+        <!-- SNSリンク -->
+        <div class="footer-sns">
+
+          <a href="https://line.me/R/ti/p/yourlineid" target="_blank" class="line" aria-label="LINE">
+            <i class="fa-brands fa-line"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- フッタここまで -->
+    <!-- オーバーレイ背景 -->
+    <div class="overlay"></div>
+    <!-- JavaScriptを読み込む場所 -->
+    <script src="document.js"></script>
+</body>
+
+</html>
